@@ -99,11 +99,10 @@ RUN apt-get update \
     #&& docker-php-ext-install ldap \
 
 # Composer
-RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" \
-    && php composer-setup.php \
-    && php -r "unlink('composer-setup.php');" \
-    && mv composer.phar /bin/composer \
+RUN COPY ../../config/composer /bin/composer \
+    && chmod 777 /bin/composer \
     && composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
 
 # Install extension using pecl
 # Notice: if pecl install get error
