@@ -92,7 +92,7 @@ RUN apt-get update \
     && :\
     && apt-get install -y libc-client-dev \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
-    && docker-php-ext-install imap \
+    && docker-php-ext-install imap
     #&& :\
     #&& apt-get install -y libldb-dev \
     #&& apt-get install -y libldap2-dev \
