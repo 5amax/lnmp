@@ -86,13 +86,13 @@ RUN apt-get update \
     #&& apt-get install -y libgmp-dev \
     #&& ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
     #&& docker-php-ext-install gmp \
-    && :\
-    && apt-get install -y postgresql-client \
-    && apt-get install -y mysql-client \
-    && :\
-    && apt-get install -y libc-client-dev \
-    && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
-    && docker-php-ext-install imap
+    #&& :\
+    #&& apt-get install -y postgresql-client \
+    #&& apt-get install -y mysql-client \
+    #&& :\
+    #&& apt-get install -y libc-client-dev \
+    #&& docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+    #&& docker-php-ext-install imap
     #&& :\
     #&& apt-get install -y libldb-dev \
     #&& apt-get install -y libldap2-dev \
